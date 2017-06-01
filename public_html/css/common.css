@@ -1,0 +1,51 @@
+html, body {    
+    height: 100%;
+}
+
+body, ul, li, i, button, input, div, p, ol, i, td, table, tr, dd, dt, span, h1, h2, h3, h4, h5, h6 {
+    margin: 0; padding: 0;
+    font-family: Roboto, Helvetica, Arial;
+}
+
+/*.flex {    
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+}*/
+
+.flex > * {
+    float: left;
+}
+
+.hide {
+    display: none;
+}
+
+.gradient {
+    background: #99c0cc; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #99c0cc 0%, #4a6d84 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#99c0cc), color-stop(100%,#4a6d84)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg,  #99c0cc 0%,#4a6d84 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg,  #99c0cc 0%,#4a6d84 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg,  #99c0cc 0%,#4a6d84 100%); /* IE10+ */
+    background: linear-gradient(135deg,  #99c0cc 0%,#4a6d84 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99c0cc', endColorstr='#4a6d84',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    overflow: hidden;
+}
+
+.white-box {
+    margin: auto;
+    width: 30%;
+    font-size: 15px;
+    margin-top: 175px;
+    margin-bottom: -175px;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 10px #555;
+}
+
+#app {
+    display: none;
+    height: 100%; width: 100%;
+}
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>CamPN - Fondation des Monastères</title>
+        
+        <meta charset="utf-8">
+        
+        <link rel="icon" href="favicon.ico" />
+        
+        <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&subset=all" rel="stylesheet" type="text/css"/>
+        
+        <!-- jQuery -->
+        <script type="text/javascript" src="js/jquery/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery-csv.min.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.xcolor.min.js"></script>
+        <script type="text/javascript" src="js/jquery/jcanvas.min.js"></script>
+        <script type="text/javascript" src="js/jquery/jshashtable-2.1.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.url.min.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.numberformatter-1.2.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.dateFormat.js"></script>    
+        <script type="text/javascript" src="js/numeral.min.js"></script>  
+        <script type="text/javascript" src="js/moment-with-locales.js"></script>          
+        <script type="text/javascript" src="js/underscore-min.js"></script>        
+        <script type="text/javascript" src="js/backbone-min.js"></script>     
+        <script type="text/javascript" src="js/backbone.marionette.min.js"></script>
+        <script type="text/javascript" src="js/backbone.stickit.js"></script>        
+                 
+        <link href="css/jquery-ui.css" rel="stylesheet"/>                
+        
+        <!-- Kendo UI -->
+        <script type="text/javascript" src="js/kendoui/kendo.web.min.js"></script>  
+        <script type="text/javascript" src="js/kendoui/cultures/kendo.culture.fr.min.js"></script> 
+        <link href="css/kendoui/kendo.common.min.css" rel="stylesheet" />
+        <link href="css/kendoui/kendo.metro-blue.min.css" rel="stylesheet" /> 
+                
+        <!-- Icomoon -->
+        <link rel="stylesheet" href="css/icomoon/style.css"/>
+        
+        <!-- build:js js/campn.min.js -->
+        <script type="text/javascript" src="js/campn/src/Utils.js"></script>
+        <script type="text/javascript" src="js/campn/src/UI/UI.js"></script>
+        <script type="text/javascript" src="js/campn/src/UI/Dialog.js"></script>
+        <script type="text/javascript" src="js/campn/src/UI/Confirm.js"></script>
+        <script type="text/javascript" src="js/campn/src/UI/Alert.js"></script>        
+        <script type="text/javascript" src="js/campn/src/App.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/global.js"></script>  
+        <script type="text/javascript" src="js/campn/src/App/UI.js"></script>    
+        <script type="text/javascript" src="js/campn/src/App/DataModel.js"></script>  
+        <script type="text/javascript" src="js/campn/src/App/DataReferential.js"></script> 
+        <script type="text/javascript" src="js/campn/src/App/Plugin.js"></script>           
+        <script type="text/javascript" src="js/campn/src/App/Server.js"></script> 
+        <script type="text/javascript" src="js/campn/src/App/Server/Session.js"></script> 
+        <script type="text/javascript" src="js/campn/src/App/Server/Query.js"></script> 
+        <script type="text/javascript" src="js/campn/src/App/Server/Node.js"></script> 
+        <script type="text/javascript" src="js/campn/src/App/Server/Criterion.js"></script> 
+        <script type="text/javascript" src="js/campn/src/App/Server/DataModel.js"></script> 
+        <script type="text/javascript" src="js/campn/src/App/Server/Auth.js"></script>         
+        <script type="text/javascript" src="js/campn/src/App/Controller.js"></script>          
+        <script type="text/javascript" src="js/campn/src/App/Controller/Session.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Controller/Query.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Controller/Node.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Controller/Criterion.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/Session.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/Query.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/Node.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/Criterion.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/CriterionNumberInput.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/CriterionStringInput.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/CriterionBooleanInput.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/CriterionDateInput.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/CriterionLinkInput.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/CriterionHugeDataLinkInput.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/CriterionIntervalInput.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/CriterionSequenceInput.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/CriterionEnumInput.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/Operator.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/Operation.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/Attribute.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/TypeFunction.js"></script>
+        <script type="text/javascript" src="js/campn/src/App/Model/Extraction.js"></script>
+        <!-- /build -->        
+        
+        <!-- build:css css/campn.min.css -->
+        <link rel="stylesheet" href="css/common.css"/>  
+        <link rel="stylesheet" href="css/login.css"/>
+        <link rel="stylesheet" href="css/app.css"/>  
+        <!-- /build -->
+        
+    </head>
+    
+    <body>        
+            
+        <div id="app"></div>
+        <div id="login"></div>
+        
+        <script type="text/javascript">   
+        $(document).ready(function() {
+            App.start();
+            moment.locale('fr');
+        });
+        </script>
+        
+    </body>
+    
+</html>
