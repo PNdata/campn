@@ -2,8 +2,8 @@ module.exports = function(grunt) {
     
   var version = '1.0.0';  
   var buildName = 'campn-ext-client-' + version;
-  var baseDir = 'C:/Users/matthieu.PNDATA/Projets/campn-v1/campn-ext-client/builds';
-  var dest = baseDir + '/' + buildName;
+  var baseDir = 'C:/Users/matthieu.PNDATA/Projets/campn-v1/campn-ext-client/dist';
+  var dest = baseDir;
       
   grunt.initConfig({
         
@@ -167,7 +167,7 @@ module.exports = function(grunt) {
     compress: {
       main: {
         options: {
-          archive: dest + '.zip'
+          archive: dest + '/' + buildName + '.zip'
         },
         files: [{
           expand: true,
