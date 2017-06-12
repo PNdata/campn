@@ -60,6 +60,22 @@ function CriterionHugeDataLinkInput(schema, key, sequenced) {
             $input.css('margin', '10px');
             $wrap.append($input);             
             $input = this.init($input);  
+            
+            var $search_wrap = $('<div></div>');
+            $wrap.append($search_wrap)
+            
+            var $search = $('<input placeholder="Filter les résultats" style="width: 100%" class="k-textbox"/>');
+            $search_wrap.append($search);
+            
+            $search.on('input', function(e) {
+              var value = e.target.value.toUpperCase();
+              if(value.length === 0) {
+                $list.data('kendoGrid').dataSource.filter([])
+              } else {
+                $list.data('kendoGrid').dataSource.filter({ field: 't', operator: 'contains', value: value });
+              }
+            });
+            
             var $list = $('<div></div>');            
             $wrap.append($list);
             $list = this.list($list);
@@ -91,18 +107,9 @@ function CriterionHugeDataLinkInput(schema, key, sequenced) {
                 pageSize: 8
             },
             sortable: true,
-            selectable: this._sequenced ? 'multiple, row' : true,
-            navigatable: true,
-            filterable: {
-                and: "et",
-                or: "ou",
-                filter: "Appliquer",
-                clear: "RAZ",
-                info: "Filtrer par : ",
-                isFalse: "Non",
-                isTrue: "Oui",                
-                selectValue: "Sélectionner"
-            },
+            selectable: this._sequenced ? 'multiple, row' : true, 
+           navigatable: true,
+            filterable: true,
             pageable: {  
                 messages: {
                     display: "{0} - {1} de {2} éléments",
@@ -119,7 +126,8 @@ function CriterionHugeDataLinkInput(schema, key, sequenced) {
             columns: [{
                 field: 't',
                 title: 'Libellé',
-                width: 120
+                width: 120,
+                filterable: true
             }],
             columnMenu: {
                 messages: {
