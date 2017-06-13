@@ -625,7 +625,11 @@ App.Controller.Session.openExtractionsList = function (options) {
       "#extraction-quantity": {
         observe: "quantity",
         onGet: function (val) {
-          return numeral(val).format("0,0").replace(/,/g, ' ');
+          if(val === null) {
+            return '?';
+          } else {
+            return numeral(val).format("0,0").replace(/,/g, ' ');
+          }
         }
       },
       "#extraction-limit": {
@@ -684,7 +688,7 @@ App.Controller.Session.openExtractionsList = function (options) {
       });
 
       this.$("#extraction-desc-link").on("click", function () {
-        var msgBox = new UI.Alert(that.model.get("description") || "Requête indisponible", "Requête de sélection");
+        var msgBox = new UI.Alert(that.model.get("description") || "Toute la base", "Requête de sélection");
         msgBox.open();
       });
     }
