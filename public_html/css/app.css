@@ -5,6 +5,42 @@ body {
     overflow: hidden;
 }
  
+#app, #login {
+  position: relative;
+  z-index: 10;
+}
+
+#loading {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: table;
+}
+
+#loading-wrap {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#loading-spinner {
+  width: 128px;
+  height: 128px;
+  display: inline-block;
+  background-image: url(../images/app-loading.gif);
+}
+
+#loading-message {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+body.login > #loading {
+  display: none;
+}
+
 #disable {
     height: 100%;
     width: 100%;

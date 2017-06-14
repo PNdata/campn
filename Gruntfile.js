@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
     
-  var version = '1.0.3';  
+  var version = '1.0.4';  
   var buildName = 'campn-ext-client-' + version;
   var baseDir = 'C:/Users/matthieu.PNDATA/Projets/campn-v1/campn-ext-client/dist';
   var dest = baseDir;
