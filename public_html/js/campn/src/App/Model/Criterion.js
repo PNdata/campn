@@ -153,7 +153,8 @@ function Criterion(data) {
     standartDeviation: {text: 'Ecart-type', shortText: 'Ecart-type', value: 'standartDeviation'},
     minimal: {text: 'Valeur minimale', shortText: 'Minimum', value: 'minimum'},
     maximal: {text: 'Valeur maximale', shortText: 'Maximum', value: 'maximum'},
-    count: {text: 'Nombre', shortText: 'Nombre', value: 'count'}
+    count: {text: 'Nombre', shortText: 'Nombre', value: 'count'},
+    countDistinct: {text: 'Nombre distinct', shortText: 'Nombre distinct', value: 'countDistinct'}
   },
   this.typeFunctions = function (type) {
     var typeFunctions = [];

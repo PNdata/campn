@@ -62,6 +62,15 @@ body {
   z-index: 10;
 }
 
+#login {
+  position: static;
+}
+
+#pndata {
+  position: absolute;
+  bottom: 0;
+}
+
 #loading {
   top: 0;
   left: 0;
